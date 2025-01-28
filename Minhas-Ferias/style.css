@@ -1,17 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 @keyframes Texto {
-    0% { color: #FFFFFF; }  
-    25% { color: #dab455; } 
-    50% { color: #d4844b; } 
-    75% { color: #c3a38e; } 
-    100% { color: #FFFFFF; } 
+    0% {
+        color: #7D6D48;
+    }
+
+    25% {
+        color: #FFFFFF;
+    }
+
+    50% {
+        color: #7D6D48;
+    }
+
+    75% {
+        color: #FFFFFF;
+    }
+
+    100% {
+        color: #7D6D48;
+    }
 }
 
-img{
+img {
     max-width: 400px;
     margin-top: 30px;
     height: 300px;
@@ -21,44 +36,57 @@ img{
     cursor: pointer;
     opacity: 70%;
 }
-img:hover{
+
+img:hover {
     transform: scale(1.07);
     opacity: 100%;
     border: solid 1px burlywood;
 }
-h1{
-    animation: Texto 3s infinite alternate;
+
+h1 {
+    color: #6b5b3e;;
 }
-p{
+
+p {
     margin-top: 5px;
     font-size: 16px;
     color: rgb(95, 67, 30);
 }
-h2, h3{
+
+h2,
+h3 {
     color: burlywood;
 }
-h4{
+
+h4 {
     margin-top: 20px;
     color: rgb(164, 135, 99);
 }
-aside img{
+
+aside img {
     max-width: 200px;
     height: 200px;
     margin-top: 20px;
     transition: 0.3s ease;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.274);
 }
-aside img:hover{
+
+aside img:hover {
     margin-bottom: 20px;
     margin-left: 5px;
     transform: scale(1.2);
     z-index: 100;
 }
-aside h4{
+
+aside h4 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-body {
+
+body,
+html {
+    width: 100%;
+    height: 100%;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -92,15 +120,19 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: #b8b7b7;
 }
+
 main {
-    margin-right: 250px; /* Deixa espaço para o aside */
+    margin-right: 250px;
+    /* Deixa espaço para o aside */
     padding: 20px;
     display: flex;
 }
@@ -109,10 +141,12 @@ section {
     margin-bottom: 20px;
     max-width: 300px;
 }
-#section2{
+
+#section2 {
     margin-left: 250px;
     max-width: 400px;
 }
+
 aside {
     background-color: rgba(250, 235, 215, 0.868);
     width: 250px;
@@ -123,7 +157,8 @@ aside {
     bottom: 0;
     padding: 20px;
     margin-bottom: 45px;
-    overflow-y: auto; /* Permite rolar caso o conteúdo ultrapasse */
+    overflow-y: auto;
+    /* Permite rolar caso o conteúdo ultrapasse */
 }
 
 footer {
@@ -133,4 +168,84 @@ footer {
     padding: 10px;
     position: relative;
     z-index: 1;
+}
+
+.container {
+    height: 350px;
+    display: flex;
+    max-width: 450px;
+    flex-direction: column;
+    margin: auto;
+    /* Centraliza horizontalmente */
+    position: absolute;
+    top: 55%;
+    /* Posiciona no meio da tela verticalmente */
+    left: 50%;
+    /* Posiciona no meio da tela horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta o deslocamento para centralização exata */
+    background-color: burlywood;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    /* Sombra para destaque */
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h1 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container form {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 5px;
+    width: 100%;
+    max-width: 90%;
+    padding: 5px;
+    margin-left: 35%;
+}
+
+form input {
+    background-color: #9b8865e8;
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus {
+    outline: none;
+    background-color: #f8f2e7;
+    /* Clareia quando clica */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    color: #4d4434e8;
+    font-weight: 550;
+    margin-top: -10px;
+}
+
+button {
+    background-color: #544935e8;
+    width: 60%;
+    height: 30px;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #947d53;
+    transform: scale(1.05); 
 }
